@@ -28,3 +28,7 @@ Third-party archived version of Thom's Happy Animals hack for Zoo Tycoon 2. This
   - Only works for newly place animals, not animals already present in your current zoos!
   - I used the latest version of animal.xml, included in ZT2 UC. I advice you to only use it if you have ZT2 UC installed.
   - I haven't fully tested the impact of this hack on the animal's behavior yet. I did some quick tests and at least pooping, peeing and birthing behavior seems all right (these are all behaviors that are influenced by biome).
+
+# Usage
+
+To use the mod, the source code should be compressed into a z2f file. This can be done by compressing the source into a zip and changing the file type to z2f.
