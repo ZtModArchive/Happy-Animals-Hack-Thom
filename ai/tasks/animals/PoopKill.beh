@@ -1,0 +1,26 @@
+<BehaviorSets>
+<PoopKill>
+      <subjects>
+         <Poop/>
+      </subjects>
+      <behaviors>
+         <BFBehKill killSubject="true"/>
+      </behaviors>
+   </PoopKill>   
+<PoopKill>
+      <subjects>
+<TrashGround/>
+      </subjects>
+      <behaviors>
+         <BFBehKill killSubject="true"/>
+      </behaviors>
+   </PoopKill>   
+<PoopKill>
+      <subjects>
+<RecyclableGround/>
+      </subjects>
+      <behaviors>
+         <BFBehKill killSubject="true"/>
+      </behaviors>
+   </PoopKill>   
+</BehaviorSets>

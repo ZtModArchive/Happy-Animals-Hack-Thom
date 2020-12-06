@@ -1,0 +1,56 @@
+<BFAITaskTemplateList>
+ <BFAITaskTemplate Name="KillPoop" Priority="1" UniqueID="Poop:KillPoop">
+      <BFAICreateData>
+         <Subjects>
+         <Poop/>  
+            <Qualifiers_AND inWater_OR_onLand="true" lifespan="GE 2"/>
+         </Subjects>
+         <Targets>
+	<self/>
+         </Targets>
+      	 <Objects/>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+              <BFBehExecTask>
+            <BFBehPlaySet behSet="PoopKill"/>
+         </BFBehExecTask>
+      <BFAICompletionData>
+      </BFAICompletionData>
+   </BFAITaskTemplate>  
+ <BFAITaskTemplate Name="KillTrash" UniqueID="Trash:KillTrash">
+      <BFAICreateData>
+         <Subjects>
+<TrashGround/>
+            <Qualifiers_AND inWater_OR_onLand="true" lifespan="GE 5"/>
+         </Subjects>
+         <Targets>
+	<self/>
+         </Targets>
+      	 <Objects/>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+              <BFBehExecTask>
+            <BFBehPlaySet behSet="PoopKill"/>
+         </BFBehExecTask>
+      <BFAICompletionData>
+      </BFAICompletionData>
+   </BFAITaskTemplate>  
+ <BFAITaskTemplate Name="KillRecyclable" UniqueID="Recyclable:KillRecyclable">
+      <BFAICreateData>
+         <Subjects>
+<RecyclableGround/>
+            <Qualifiers_AND inWater_OR_onLand="true" lifespan="GE 5"/>
+         </Subjects>
+         <Targets>
+	<self/>
+         </Targets>
+      	 <Objects/>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+              <BFBehExecTask>
+            <BFBehPlaySet behSet="PoopKill"/>
+         </BFBehExecTask>
+      <BFAICompletionData>
+      </BFAICompletionData>
+   </BFAITaskTemplate>                              
+</BFAITaskTemplateList>

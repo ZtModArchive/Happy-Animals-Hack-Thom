@@ -1,0 +1,88 @@
+<BFTypedBinder binderType="Poop" abstract="true" versionReplace="true">
+   <types>
+      <entity>
+         <item>
+            <Poop/>
+         </item>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity entityVersion="1"/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="UI\minigames\Poop_icon.dds"/>
+         </UIAspect>
+      </UIToggleButton>         
+      <BFGInfluenceComponent defaultRadius="0.5" defaultGroupFactor="0.0" defaultRadiusDropoff="linear" defaultGroupDropoff="none">
+         <smell key="bad" value=".1"/>
+      </BFGInfluenceComponent>
+      <ZTPlacementData b_DoNotSave="1" moveable="false" randomRotate="false" gridSnap="true" autoFootprint="true" deletable="true" selectable="true"/>
+      <BFGCollisionData isTraversable="true" isPassable="true"/>
+      <BFAIEntityDataShared b_ReceiveUpdates="true" b_Sniffable="true">
+	 <BFAINeedAdjusts lifespan="0.75"/>
+	       </BFAIEntityDataShared>
+      <ZTUserStaffAction>
+	      <RemoveObject locid="superstaff:animal_poop" effect="SuperStaffRake" delay="2.0" prescript="behavior:scripts/CompostPoo.lua:CompostPoo"/>
+      </ZTUserStaffAction>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFSimpleLODComponent isBFR="true" modelfile="entities/objects/Items/Poop_Bird/Poop_Bird" switch="0 15 30"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+      <BFBinder required="1">
+         <instance>
+            <ZTAIStaffRequestController triggerOnCreation="true">
+               <ZTStaffRequestData tokenKey="t_RakePoo" subjectType="Keeper" priority="6"/>
+            </ZTAIStaffRequestController>
+         </instance>
+      </BFBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFAIEntityDataInstance b_ScentEmitter="false"/>
+         </instance>
+      </BFBinder>
+	      	   <BFBinder required="1">
+         <instance>
+            <BFAICognitiveMgr>
+               <Sensors>
+                  <ZTAISensor/>
+                  <BFAISensorSelf/>
+                  <ZTAISensorLand/>
+               </Sensors>
+      <StateThinkers>
+                  <ZTAIStateThinker>
+                     <BFAIStateVar Name="lifespan" Value="" ValueMin="0" ValueMax="0" CessationThreshold="0" TriggerThreshold="90" CriticalThreshold="90" Advanced="true"/>
+                  </ZTAIStateThinker>
+               </StateThinkers>
+               <TaskThinkers>
+                  <ZTAITaskThinker/>
+               </TaskThinkers>
+            </BFAICognitiveMgr>
+         </instance>
+         <shared>
+            <BFAICogShared>
+               <BFAINoPerceive>
+                  <fence/>
+                  <path/>
+                  <building/>
+                  <entrance/>
+                  <AnimalCrate/>
+               </BFAINoPerceive>
+            </BFAICogShared>
+         </shared>
+      </BFBinder>
+	  		<BFBinder required="1">
+			<instance>
+				<BFBehaviorMgr behaviorVersion="1">
+				</BFBehaviorMgr>
+			</instance>
+		</BFBinder>
+   </binder>
+</BFTypedBinder>

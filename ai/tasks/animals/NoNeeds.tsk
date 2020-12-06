@@ -1,0 +1,471 @@
+<BFAITaskTemplateList>
+<BFAITaskTemplate Name="Refill" TaskDelayMin="50" TaskDelayMax="100" UseForKeeperPanel="false" UniqueID="animal:Refill">
+      <BFAICreateData>
+         <Subjects>
+<animal/>
+         </Subjects>
+         <Targets>
+            <b_CarnivoreFood/>
+<b_GranivoreFood/>
+<b_GraminivoreFood/>
+<b_CrustacivoreFood/>
+<b_CancrivoreFood/>
+<b_ChumEaterFood/>
+<b_RadicivoreFood/>
+<b_AmbivoreFood/>
+<b_FolivoreFood/>
+<b_PiscivoreFood/>
+<b_FrugivoreFood/>
+<b_InsectivoreFood/>
+<b_EucalpytusFood/>
+<b_BerriesFood/>
+<b_BambooFood/>
+<b_Water/>
+<b_CarnivoreFood/>
+<b_MeatEaterFood/>
+<b_FishEaterFood/>
+<b_PlanktivoreFood/>
+<b_SeaweedEaterFood/>
+<b_SquidEaterFood/>
+<b_JellyfishEaterFood/>
+<b_ShellfishEaterFood/>
+<b_HoneyFood/>
+<b_SmallFood/>
+<b_LargeFood/>
+            <Qualifiers_AND f_FoodLevel="L 50" inHabitat="true"/>
+         </Targets>
+      	 <Objects/>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="1000"/>
+         <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAITargetData f_FoodLevel="100"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixRest" Priority="1"  UniqueID="animal:FixRest">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers rest="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData rest="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixEscaped" Priority="5"  UniqueID="animal:FixEscaped">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers b_Escaped="true" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+         <BFBehSendToken>
+            <BFAITokenList>
+               <BFAIToken Name="t_Tranquilized" GiveTo="subject" Reconsider="false"/>
+            </BFAITokenList>
+         </BFBehSendToken>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData b_Escaped="false"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixPrivacy" Priority="1"  UniqueID="animal:FixPrivacy">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers privacy="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData privacy="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixPrivacy_Water" Priority="1"  UniqueID="animal:FixPrivacy_Water">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers_AND isSwimming="true" privacy="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData privacy="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixHunger_Water" Priority="3"  UniqueID="animal:FixHunger_Water">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers_AND isSwimming="true" hunger="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData hunger="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixHunger" Priority="1"  UniqueID="animal:FixHunger">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers hunger="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData hunger="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixThirst" Priority="1"  UniqueID="animal:FixThirst">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers thirst="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData thirst="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixStimulation" Priority="1"  UniqueID="animal:FixStimulation">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers stimulation="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData stimulation="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixStimulation_Water" Priority="1"  UniqueID="animal:FixStimulation_Water">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers_AND isSwimming="true" stimulation="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData stimulation="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixSocial" Priority="1"  UniqueID="animal:FixSocial">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers social="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData social="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixSocial_Water" Priority="1"  UniqueID="animal:FixSocial_Water">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers_AND isSwimming="true" social="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData social="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixExercise" Priority="1"  UniqueID="animal:FixExercise">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers exercise="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData exercise="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixHygiene" Priority="1"  UniqueID="animal:FixHygiene">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers hygiene="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData hygiene="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixHygiene_Water" Priority="3"  UniqueID="animal:FixHygiene_Water">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers_AND isSwimming="true" hygiene="GE 70" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      <ZTBehChangeWaterDirtiness Clean="true"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData hygiene="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixHealth" Priority="1"  UniqueID="animal:FixHealth">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers health="GE 60" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData health="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="FixHealth_Water" Priority="3"  UniqueID="animal:FixHealth_Water">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+<Qualifiers_AND isSwimming="true" health="GE 60" />
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      <ZTBehChangeWaterDirtiness Clean="true"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAISubjectData health="-50"/>
+      </BFAICompletionData>
+   </BFAITaskTemplate>
+<BFAITaskTemplate Name="TankDirtyFix" Priority="1" UniqueID="animal:TankDirtyFix">
+      <BFAICreateData>
+         <Subjects>
+            <animal/>
+            <Qualifiers_AND waterDirtiness="GE 0.5" inWater_OR_onLand="true"/>
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects/>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+     <BFBehExecTask>
+         <ZTBehFeedback>
+            <ZTFeedbackData>
+               <ZTEmoticonInfo emoticonName="EmoteHappy"/>
+            </ZTFeedbackData>
+         </ZTBehFeedback>
+      <ZTBehChangeWaterDirtiness Clean="true"/>
+      </BFBehExecTask>
+      <BFAICompletionData>
+         <BFAIAttributeFloatMap hygiene="15"/>
+      </BFAICompletionData>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+</BFAITaskTemplateList>
