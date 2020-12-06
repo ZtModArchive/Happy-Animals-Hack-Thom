@@ -4,6 +4,7 @@ Third-party archived version of Thom's Happy Animals hack for Zoo Tycoon 2. This
 # Information
 
 - **Creators:** Thom
+- **Licence:** Public Domain
 - **Compatibility:**
 
 | Expansion            | Version           |
