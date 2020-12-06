@@ -1,5 +1,5 @@
 # Happy Animals Hack Biome and Space Hack Included (Thom)
-Archived version of Thom's Happy Animals hack for Zoo Tycoon 2. This is not a maintained repository so pull requests and issues should not be submitted here.
+Third-party archived version of Thom's Happy Animals hack for Zoo Tycoon 2. This repository is not maintained by the developers of this mod nor by ZtModArchive, pull requests and issues should not be opened on this repository.
 
 # Information
 
