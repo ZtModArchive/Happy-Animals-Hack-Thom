@@ -6,7 +6,7 @@ Archived version of Thom's Happy Animals hack for Zoo Tycoon 2. This is not a ma
 - **Creators:** Thom
 - **Compatibility:**
 
-| Expansionmm          | Version           |
+| Expansion            | Version           |
 | -------------------- |:-----------------:|
 | Zoo Tycoon 2         | unknown           |
 | Endangered Species   | unknown           |
