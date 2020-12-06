@@ -6,16 +6,16 @@ Archived version of Thom's Happy Animals hack for Zoo Tycoon 2. This is not a ma
 - **Creators:** Thom
 - **Compatibility:**
 
-| Expansion                                             | Version           |
-| ----------------------------------------------------- |:-----------------:|
-| <span style="color:green">Zoo Tycoon 2</span>         | unknown           |
-| <span style="color:green">Endangered Species</span>   | unknown           |
-| <span style="color:green">African Adventure</span>    | unknown           |
-| <span style="color:green">Zookeeper Collection</span> | unknown           |
-| <span style="color:green">Marine Mania</span>         | unknown           |
-| <span style="color:green">Dino Danger</span>          | unknown           |
-| <span style="color:green">Extinct Animals</span>      | unknown           |
-| <span style="color:green">Ultimate Collection</span>  | >=33.05.00.0002UO |
+| Expansionmm          | Version           |
+| -------------------- |:-----------------:|
+| Zoo Tycoon 2         | unknown           |
+| Endangered Species   | unknown           |
+| African Adventure    | unknown           |
+| Zookeeper Collection | unknown           |
+| Marine Mania         | unknown           |
+| Dino Danger Pack     | unknown           |
+| Extinct Animals      | unknown           |
+| Ultimate Collection  | >=33.05.00.0002UO |
 
 - **Description:**
   - Keeps animal needs satisfied.
